@@ -45,23 +45,250 @@
                 <section>
                     <h2>Look Ma, No Server</h2>
                     <h4>Testing Front End Code Without a Server</h4>
+                </section>
+
+                <section>
+                    <h2>Me</h2>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>The Problem</h1>
+                    </section>
+
+                    <section>
+                        <h2>Data-Driven Appications</h2>
+
+                        <div class='fragment'>Diagram of App</div>
+                    </section>
+
+                    <section>
+                        <h2>Service-Oriented Architecture</h2>
+
+                        <div class='fragment'>Diagram of SOA</div>
+                    </section>
+
+                    <section>
+                        <h2>Project Status</h2>
+
+                        <div>Diagram of Incomplete Project</div>
+                    </section>
+
+                    <section>
+                        <h2>Project Status</h2>
+
+                        <div>Build Failing image?</div>
+                    </section>
+
+                    <section>
+                        <h2>External Services</h2>
+
+                        <div>Image of external service status (down)</div>
+                    </section>
+
+                    <section>
+                        <h2>JavaScript Tests</h2>
+
+                        <div class='fragment'>Diagram of JS Tests (blank)</div>
+                    </section>
+
+                    <section>
+                        <h2>JavaScript Tests</h2>
+
+                        <div class='fragment'>Diagram of JS Tests (real)</div>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>The Plan</h1>
+                    </section>
+
+                    <section>
+                        <h2>Goals:</h2>
+
+                        <ol>
+                            <li class='fragment'>No changes to our application</li>
+                            <li class='fragment'>Handle successes <strong>and</strong> errors</li>
+                            <li class='fragment'>Test both expected and unexpected data</li>
+                        </ol>
+                    </section>
+
+                    <section>
+                        <h2>How do we do that?</h2>
+                    </section>
+
+                    <section>
+                        <h2>Hijack the Ajax Call</h2>
+
+                        <div>Image of hijack (background?)</div>
+                    </section>
+
+                    <section>
+                        <h3>Hijack the Ajax Call</h3>
+
+                        <div>Diagram of Ajax call Hijacking</div>
+
+                        <div class='fragment'>
+                            <h3>Inspect the Request</h3>
+
+                            <div>Image of inspection</div>
+                        </div>
+                        <div class='fragment'>
+                            <h3>Return Mock Data</h3>
+
+                            <div>Image of fake data</div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <p style='font-size:1.5em;'>The Hunger Tests: Mocking<del>jay</del>data</p>
+
+                        <div>Diagram of Ajax Mocking (real)</div>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>The Exectuion</h1>
+                    </section>
+
+                    <section>
+                        <h2>Tools Galore</h2>
+
+                        <div class='fragment'><a href='https://github.com/jakerella/jquery-mockjax'>jQuery Mockjax</a></div>
+                        <div class='fragment'><a href='https://docs.angularjs.org/api/ngMock/service/$httpBackend'>Angular $httpBackend (ng-mocks)</a></div>
+                        <div class='fragment'><a href='#'>Jasmine.Ajax</a></div>
+                        <div class='fragment'><a href='http://sinonjs.org/docs/#server'>Sinon</a></div>
+                    </section>
+
+                    <section>
+                        <h3>What should I use?</h3>
+
+                        <div class='fragment'>
+                            <h4>Whatever makes your workflow easiest.</h4>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3>Not Helpful.</h3>
+
+                        <div class='fragment'>
+                            <h3>Yes it is.</h3>
+                            <div>look of disapproval</div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>Let's look at some sample code...</h2>
+                    </section>
+
+                    <section>
+                        <h2>Beer</h2>
+
+                        <div>background image of beer</div>
+                    </section>
+
+                    <section>
+                        <pre><code data-trim contenteditable>
+[app code]
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Pseudo Tests</h2>
+                        <p>Just like real tests, except that they actually pass.</p>
+
+                        <pre class='fragment'><code data-trim contenteditable>
+[pseudo test code]
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Idemopotency</h2>
+                        <p>Just like real potency, only idemo.</p>
+                    </section>
+
+                    <section>
+                        <pre><code data-trim contenteditable>
+[pseudo setup and breakdown code]
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code data-trim contenteditable>
+[pseudo ajax intecepting code]
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h3>That's great, but I don't live in the pseudo world...</h3>
+
+                        <p style='margin-top:4em;' class='fragment'>...or do you?</p>
+                    </section>
+
+                    <section>
+                        <h3>jQuery Mockjax</h3>
+                        <pre><code data-trim contenteditable>
+[mockjax code - basic success]
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code data-trim contenteditable>
+[mockjax code - basic 500]
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h3>jQuery Mockjax</h3>
+                        <pre><code data-trim contenteditable>
+[mockjax code - custom response method]
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h3>Angular $httpBackend</h3>
+                        <pre><code data-trim contenteditable>
+[angular code]
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h3>Jasmine.ajax</h3>
+                        <pre><code data-trim contenteditable>
+[jasmine code]
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h3>Sinon</h3>
+                        <pre><code data-trim contenteditable>
+[sinon code]
+                        </code></pre>
+                    </section>
+
+                </section>
+
+
+                <section>
+                    <h2>Wrapping Things Up</h2>
+
+                    <ul>
+                        <li class='fragment'>Test your JavaScript code</li>
+                        <li class='fragment'>Don't rely on external services (even your own)</li>
+                        <li class='fragment'>Find a library that works for you</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>Thank You!</h1>
+                    <h3>Look Ma, No Server</h3>
+                    <h4>Testing Front End Code Without a Server</h4>
                     <p style='margin-top:2em;'>
                         Jordan Kasper<br>
                         <a href='http://twitter.com/jakerella'>@jakerella</a> | <a href='#'>bit.ly/[LINK]</a>
                     </p>
-                </section>
-
-                <section>
-                    <h2>Outline</h2>
-
-* The Problem
-  * You're developing a data-driven front end application with lots of Ajax calls
-  * You're testing your code (you are testing, right?)
-  * The back end API may not be up, or even complete
-
-* The Tests
-  * 
-
                 </section>
 
             </div>
