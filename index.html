@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Look Ma, No Server!</title>
+
+        <meta name="description" content="Testing Front End Code Without a Server">
+        <meta name="author" content="Jordan Kasper">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.min.css">
+        <link rel="stylesheet" href="node_modules/reveal.js/css/theme/sky.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="tomorrow.css">
+
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'node_modules/reveal.js/css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="node_modules/reveal.js/lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class='reveal'>
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class='slides'>
+                <section>
+                    <h2>Look Ma, No Server</h2>
+                    <h4>Testing Front End Code Without a Server</h4>
+                    <p style='margin-top:2em;'>
+                        Jordan Kasper<br>
+                        <a href='http://twitter.com/jakerella'>@jakerella</a> | <a href='#'>bit.ly/[LINK]</a>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Outline</h2>
+
+* The Problem
+  * You're developing a data-driven front end application with lots of Ajax calls
+  * You're testing your code (you are testing, right?)
+  * The back end API may not be up, or even complete
+
+* The Tests
+  * 
+
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="node_modules/reveal.js/lib/js/head.min.js"></script>
+        <script src="node_modules/reveal.js/js/reveal.min.js"></script>
+
+        <script>
+
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            progress: false,
+            history: true,
+            transition: "linear",
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'node_modules/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'node_modules/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'node_modules/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'node_modules/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+            ]
+        });
+
+        </script>
+
+    </body>
+</html>
