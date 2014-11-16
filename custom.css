@@ -28,3 +28,13 @@ aside.title-text h3 {
     margin-left: 0;
     margin-right: 0;
 }
+
+
+.slides cite {
+    display: block;
+    clear: both;
+    font-size: 0.5em;
+    color: #999;
+    position: absolute;
+    bottom: -4em;
+}

@@ -45,7 +45,11 @@
 
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class='slides'>
-                <section data-background='images/Alice_mock_turtle_cropped.png' class='center'>
+
+
+                <!-- The Introduction -->
+
+                <section data-background='images/Alice_mock_turtle_cropped.png'>
                     <aside class='title-text'>
                         <h2>Look Ma, No Server!</h2>
                         <h3>Testing Front End Code Without a Server</h3>
@@ -62,245 +66,270 @@
                     </aside>
                 </section>
 
-                <section class='center'>
-                    <section class='center'>
-                        <img src='images/hobbes_large_trans.png' alt='Hobbes'>
-                    </section>
-                    <section class='center'>
-                        <img src='images/nomad-js.png' style='width:25%;' alt='NomadJS'>
-                    </section>
+                <section>
+                    <img src='images/hobbes_large_trans.png' alt='Hobbes'>
+                </section>
+                <section>
+                    <img src='images/nomad-js.png' style='width:25%;' alt='NomadJS'>
                 </section>
 
-                <section class='center'>
-                    <section class='center'>
-                        <h1>The Situation:</h1>
-                    </section>
 
-                    <section class='center'>
-                        <h3>You have a data-driven appication...</h3>
+                <!-- The Situation -->
 
-                        <h3 class='fragment' style='margin-top:1em;'>...with a service-oriented architecture.</h3>
-                    </section>
+                <section data-background='#eff'>
+                    <h1>The Situation:</h1>
+                </section>
 
-                    <section class='center'>
-                        <div>Diagram of data-driven, SOA</div>
-                    </section>
+                <section>
+                    <h3>You have a data-driven appication...</h3>
 
-                    <section class='center'>
-                        <h3>And you have JavaScript tests...</h3>
+                    <h3 class='fragment' style='margin-top:1em;'>...with a service-oriented architecture.</h3>
+                </section>
 
-                        <pre class='fragment'><code data-trim contenteditable>
+                <section>
+                    <img alt='Diagram of data services architecture' src='images/data_services.png'>
+                    <cite>http://www.compositesw.com/data-virtualization/data-services/</cite>
+                </section>
+
+                <section data-background='#fcfcb0'>
+                    <h4>Service-Oriented Architecture</h4>
+                    <img alt='The Blind Men and the Elephant' src='images/elephant.gif'>
+                    <cite>http://msdn.microsoft.com/en-us/library/bb833022.aspx</cite>
+
+                    <aside class='notes'>
+                        John Godfrey Saxe's poem "The blind men and the elephant". Six blind men from Indostan 
+                        encounter an elephant – each of the men then describes the elephant a bit differently 
+                        because they are influenced by their individual experiences.
+                    </aside>
+                </section>
+
+                <section>
+                    <h3>And you have JavaScript tests...</h3>
+
+                    <pre class='fragment'><code data-trim contenteditable>
 // /test/front-end.js
 
 // Note to future self: write tests.
 
 // Note from future self: thanks, jerk.
-                        </code></pre>
-                    </section>
+                    </code></pre>
+                </section>
 
-                    <section data-background='#fff' class='center'>
-                        <h3 style='font-size:1.2em;'>You <em>want</em> to have JavaScript Tests...</h3>
-                        <img src='images/disapproval.png' alt='Look of disapproval' style='width:40%;'>
-                    </section>
+                <section data-background='#fff'>
+                    <h3 style='font-size:1.2em;'>You <em>want</em> to have JavaScript Tests...</h3>
+                    <img src='images/disapproval.png' alt='Look of disapproval' style='width:40%;'>
                 </section>
                 
                 <section>
-                    <section class='top-left'>
-                        <h2>JavaScript Tests</h2>
+                    <h3>Web Application Testing</h3>
 
-                        <div class='fragment'>Diagram of JS Tests (real)</div>
-                    </section>
+                    <img alt='Nested Russian dolls' src='images/nested_dolls.png'>
 
-                    <section>
-                        <h2>Project Status</h2>
+                    <cite>http://www.aventure.ac.in/the-russian-riddle/</cite>
+                </section>
 
-                        <div>Diagram of Incomplete Project</div>
-                    </section>
+                <section data-background='#eff' data-transition='fade'>
+                    <img alt='Web app flow diagram' src='images/async-flow.png'>
+                </section>
 
-                    <section>
-                        <h2>Project Status</h2>
+                <section data-background='#eff' data-transition='fade'>
+                    <img alt='Web app flow diagram - no server' src='images/async-flow-no-server.png'>
+                </section>
 
-                        <div>Build Failing image?</div>
-                    </section>
 
-                    <section>
-                        <h2>External Services</h2>
+                <!-- The Plan -->
 
-                        <div>Image of external service status (down)</div>
-                    </section>
+                <section>
+                    <h1>The Plan:</h1>
                 </section>
 
                 <section>
-                    <section>
-                        <h1>The Plan</h1>
-                    </section>
+                    <h2>Goals...</h2>
 
-                    <section>
-                        <h2>Goals:</h2>
-
-                        <ol>
-                            <li class='fragment'>No changes to our application</li>
-                            <li class='fragment'>Handle successes <strong>and</strong> errors</li>
-                            <li class='fragment'>Test both expected and unexpected data</li>
-                        </ol>
-                    </section>
-
-                    <section>
-                        <h2>How do we do that?</h2>
-                    </section>
-
-                    <section>
-                        <h2>Hijack the Ajax Call</h2>
-
-                        <div>Image of hijack (background?)</div>
-                    </section>
-
-                    <section>
-                        <h3>Hijack the Ajax Call</h3>
-
-                        <div>Diagram of Ajax call Hijacking</div>
-
-                        <div class='fragment'>
-                            <h3>Inspect the Request</h3>
-
-                            <div>Image of inspection</div>
-                        </div>
-                        <div class='fragment'>
-                            <h3>Return Mock Data</h3>
-
-                            <div>Image of fake data</div>
-                        </div>
-                    </section>
-
-                    <section>
-                        <p style='font-size:1.5em;'>The Hunger Tests: Mocking<del>jay</del>data</p>
-
-                        <div>Diagram of Ajax Mocking (real)</div>
-                    </section>
+                    <ol>
+                        <li class='fragment'>Test our client application code</li>
+                        <li class='fragment'>No changes to our server application</li>
+                        <li class='fragment'>Handle successes <strong>and</strong> errors</li>
+                        <li class='fragment'>Test both expected and unexpected data</li>
+                    </ol>
                 </section>
 
                 <section>
-                    <section>
-                        <h1>The Exectuion</h1>
-                    </section>
+                    <h2>How do we do that?</h2>
+                </section>
 
-                    <section>
-                        <h2>Tools Galore</h2>
+                <section data-background='images/hijack.jpg'>
+                    <h1 style='color:white; font-weight:bold; font-style:italic; position:relative; bottom:-1.7em; font-family:arial;'>
+                        Ajax
+                    </h1>
 
-                        <div class='fragment'><a href='https://github.com/jakerella/jquery-mockjax'>jQuery Mockjax</a></div>
-                        <div class='fragment'><a href='https://docs.angularjs.org/api/ngMock/service/$httpBackend'>Angular $httpBackend (ng-mocks)</a></div>
-                        <div class='fragment'><a href='#'>Jasmine.Ajax</a></div>
-                        <div class='fragment'><a href='http://sinonjs.org/docs/#server'>Sinon</a></div>
-                    </section>
+                    <aside class='notes'>
+                        This is an actual movie (minus the "Ajax" bit):<br>
+                        After the passing away of his wife, Pooja, Delhi-based Vikram Madan, enrolls his daughter, 
+                        Priya, in a boarding school in Amritsar, and re-locates to work as a Mechanic at Chandigarh 
+                        Airport. His daughter informs him that she is on her way to Amritsar on a hostel-trip on 
+                        Indian Airlines Flight IC147. Shortly thereafter, Vikram will be informed that the flight 
+                        has been hijacked to Dubai by Islamic terrorists, who want the Indian government to release 
+                        one of their comrades, Rashid Omar, or else they will start killing the passengers and crew 
+                        one by one at half-hour intervals.
+                    </aside>
+                </section>
 
-                    <section>
-                        <h3>What should I use?</h3>
+                <section data-background='#eff' data-transition='fade'>
+                    <img alt='Web app flow diagram' src='images/async-flow.png'>
+                </section>
 
-                        <div class='fragment'>
-                            <h4>Whatever makes your workflow easiest.</h4>
-                        </div>
-                    </section>
+                <section data-background='#eff' data-transition='fade'>
+                    <img alt='Async mocking diagram' src='images/async-mock.png'>
+                </section>
 
-                    <section>
-                        <h3>Not Helpful.</h3>
+                <section>
+                    <h3>Hijack the Ajax Call</h3>
 
-                        <div class='fragment'>
-                            <h3>Yes it is.</h3>
-                            <div>look of disapproval</div>
-                        </div>
-                    </section>
+                    <div>Diagram of Ajax call Hijacking</div>
 
-                    <section>
-                        <h2>Let's look at some sample code...</h2>
-                    </section>
+                    <div class='fragment'>
+                        <h3>Inspect the Request</h3>
 
-                    <section>
-                        <h2>Beer</h2>
+                        <div>Image of inspection</div>
+                    </div>
+                    <div class='fragment'>
+                        <h3>Return Mock Data</h3>
 
-                        <div>background image of beer</div>
-                    </section>
+                        <div>Image of fake data</div>
+                    </div>
+                </section>
 
-                    <section>
-                        <pre><code data-trim contenteditable>
+                <section>
+                    <p style='font-size:1.5em;'>The Hunger Tests: Mocking<del>jay</del>data</p>
+
+                    <div>Diagram of Ajax Mocking (real)</div>
+                </section>
+
+
+                <!-- The Execution -->
+
+                <section>
+                    <h1>The Exectuion</h1>
+                </section>
+
+                <section>
+                    <h2>Tools Galore</h2>
+
+                    <div class='fragment'><a href='https://github.com/jakerella/jquery-mockjax'>jQuery Mockjax</a></div>
+                    <div class='fragment'><a href='https://docs.angularjs.org/api/ngMock/service/$httpBackend'>Angular $httpBackend (ng-mocks)</a></div>
+                    <div class='fragment'><a href='#'>Jasmine.Ajax</a></div>
+                    <div class='fragment'><a href='http://sinonjs.org/docs/#server'>Sinon</a></div>
+                </section>
+
+                <section>
+                    <h3>What should I use?</h3>
+
+                    <div class='fragment'>
+                        <h4>Whatever makes your workflow easiest.</h4>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Not Helpful.</h3>
+
+                    <div class='fragment'>
+                        <h3>Yes it is.</h3>
+                        <div>look of disapproval</div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Let's look at some sample code...</h2>
+                </section>
+
+                <section>
+                    <h2>Beer</h2>
+
+                    <div>background image of beer</div>
+                </section>
+
+                <section>
+                    <pre><code data-trim contenteditable>
 [app code]
-                        </code></pre>
-                    </section>
-
-                    <section>
-                        <h2>Pseudo Tests</h2>
-                        <p>Just like real tests, except that they actually pass.</p>
-
-                        <pre class='fragment'><code data-trim contenteditable>
-[pseudo test code]
-                        </code></pre>
-                    </section>
-
-                    <section>
-                        <h2>Idemopotency</h2>
-                        <p>Just like real potency, only idemo.</p>
-                    </section>
-
-                    <section>
-                        <pre><code data-trim contenteditable>
-[pseudo setup and breakdown code]
-                        </code></pre>
-                    </section>
-
-                    <section>
-                        <pre><code data-trim contenteditable>
-[pseudo ajax intecepting code]
-                        </code></pre>
-                    </section>
-
-                    <section>
-                        <h3>That's great, but I don't live in the pseudo world...</h3>
-
-                        <p style='margin-top:4em;' class='fragment'>...or do you?</p>
-                    </section>
-
-                    <section>
-                        <h3>jQuery Mockjax</h3>
-                        <pre><code data-trim contenteditable>
-[mockjax code - basic success]
-                        </code></pre>
-                    </section>
-
-                    <section>
-                        <pre><code data-trim contenteditable>
-[mockjax code - basic 500]
-                        </code></pre>
-                    </section>
-
-                    <section>
-                        <h3>jQuery Mockjax</h3>
-                        <pre><code data-trim contenteditable>
-[mockjax code - custom response method]
-                        </code></pre>
-                    </section>
-
-                    <section>
-                        <h3>Angular $httpBackend</h3>
-                        <pre><code data-trim contenteditable>
-[angular code]
-                        </code></pre>
-                    </section>
-
-                    <section>
-                        <h3>Jasmine.ajax</h3>
-                        <pre><code data-trim contenteditable>
-[jasmine code]
-                        </code></pre>
-                    </section>
-
-                    <section>
-                        <h3>Sinon</h3>
-                        <pre><code data-trim contenteditable>
-[sinon code]
-                        </code></pre>
-                    </section>
-
+                    </code></pre>
                 </section>
 
+                <section>
+                    <h2>Pseudo Tests</h2>
+                    <p>Just like real tests, except that they actually pass.</p>
+
+                    <pre class='fragment'><code data-trim contenteditable>
+[pseudo test code]
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Idemopotency</h2>
+                    <p>Just like real potency, only idemo.</p>
+                </section>
+
+                <section>
+                    <pre><code data-trim contenteditable>
+[pseudo setup and breakdown code]
+                    </code></pre>
+                </section>
+
+                <section>
+                    <pre><code data-trim contenteditable>
+[pseudo ajax intecepting code]
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>That's great, but I don't live in the pseudo world...</h3>
+
+                    <p style='margin-top:4em;' class='fragment'>...or do you?</p>
+                </section>
+
+                <section>
+                    <h3>jQuery Mockjax</h3>
+                    <pre><code data-trim contenteditable>
+[mockjax code - basic success]
+                    </code></pre>
+                </section>
+
+                <section>
+                    <pre><code data-trim contenteditable>
+[mockjax code - basic 500]
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>jQuery Mockjax</h3>
+                    <pre><code data-trim contenteditable>
+[mockjax code - custom response method]
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Angular $httpBackend</h3>
+                    <pre><code data-trim contenteditable>
+[angular code]
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Jasmine.ajax</h3>
+                    <pre><code data-trim contenteditable>
+[jasmine code]
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Sinon</h3>
+                    <pre><code data-trim contenteditable>
+[sinon code]
+                    </code></pre>
+                </section>
+
+
+                <!-- The Conclusion -->
 
                 <section>
                     <h2>Wrapping Things Up</h2>
@@ -337,7 +366,7 @@
             controls: false,
             progress: false,
             history: true,
-            center: false,
+            center: true,
             transition: 'linear',
             backgroundTransition: 'slide',
 
