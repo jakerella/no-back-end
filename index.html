@@ -183,83 +183,73 @@
                     <img alt='Async mocking diagram' src='images/async-mock.png'>
                 </section>
 
-                <section>
-                    <h3>Hijack the Ajax Call</h3>
+                <section data-background='images/mockingjay.jpg' class='outline'>
+                    <h3 style='font-weight:bold;font-family:arial,sans-serif;'>The Hunger Tests: Mockingdata</h3>
 
-                    <div>Diagram of Ajax call Hijacking</div>
+                    <ol style='margin-top:2em;'>
+                        <li class='fragment'>Intercept the XMLHttpRequest</li>
+                        <li class='fragment'>Inspect the URL, headers, and data</li>
+                        <li class='fragment'>Execute callbacks with mock data</li>
+                    </ol>
 
-                    <div class='fragment'>
-                        <h3>Inspect the Request</h3>
-
-                        <div>Image of inspection</div>
-                    </div>
-                    <div class='fragment'>
-                        <h3>Return Mock Data</h3>
-
-                        <div>Image of fake data</div>
-                    </div>
-                </section>
-
-                <section>
-                    <p style='font-size:1.5em;'>The Hunger Tests: Mocking<del>jay</del>data</p>
-
-                    <div>Diagram of Ajax Mocking (real)</div>
+                    <cite>http://www.imdb.com/media/rm550033152/tt1951265?ref_=ttmd_md_pv</cite>
                 </section>
 
 
                 <!-- The Execution -->
 
                 <section>
-                    <h1>The Exectuion</h1>
+                    <h1 style='font-size:2.8em;'>The Exectuion:</h1>
                 </section>
 
                 <section>
                     <h2>Tools Galore</h2>
 
-                    <div class='fragment'><a href='https://github.com/jakerella/jquery-mockjax'>jQuery Mockjax</a></div>
-                    <div class='fragment'><a href='https://docs.angularjs.org/api/ngMock/service/$httpBackend'>Angular $httpBackend (ng-mocks)</a></div>
-                    <div class='fragment'><a href='#'>Jasmine.Ajax</a></div>
-                    <div class='fragment'><a href='http://sinonjs.org/docs/#server'>Sinon</a></div>
+                    <ul>
+                        <li class='fragment'><a href='https://github.com/jakerella/jquery-mockjax'>jQuery Mockjax</a></li>
+                        <li class='fragment'><a href='https://docs.angularjs.org/api/ngMock/service/$httpBackend'>Angular $httpBackend (ng-mocks)</a></li>
+                        <li class='fragment'><a href='https://github.com/pivotal/jasmine-ajax'>Jasmine.Ajax</a></li>
+                        <li class='fragment'><a href='http://sinonjs.org/docs/#server'>Sinon</a></li>
+                    </ul>
                 </section>
 
                 <section>
-                    <h3>What should I use?</h3>
+                    <h2>What should I use?</h2>
 
-                    <div class='fragment'>
-                        <h4>Whatever makes your workflow easiest.</h4>
-                    </div>
+                    <h4 class='fragment' style='margin-top:1em;'>Whatever makes your workflow easier.</h4>
                 </section>
 
-                <section>
+                <section data-background='#fff'>
                     <h3>Not Helpful.</h3>
 
-                    <div class='fragment'>
-                        <h3>Yes it is.</h3>
-                        <div>look of disapproval</div>
-                    </div>
+                    <img src='images/disapproval.png' alt='Look of disapproval' style='width:30%;'>
+
+                    <h2 class='fragment' style='margin-top:2em;'>Yes, it is.</h2>
                 </section>
 
                 <section>
                     <h2>Let's look at some sample code...</h2>
                 </section>
 
-                <section>
+                <section data-background='images/beer.png'>
                     <h2>Beer</h2>
 
-                    <div>background image of beer</div>
+                    <p class='fragment' style='margin-top:1em;'>Search for a beer</p>
+                    <p class='fragment'>Mark a beer as a "favorite"</p>
+                    <p class='fragment'>Rate a beer</p>
+
+                    <cite style='right:0;left:auto;bottom:-10em;'>http://pngimg.com/download/2330</cite>
                 </section>
 
                 <section>
-                    <pre><code data-trim contenteditable>
-[app code]
-                    </code></pre>
+                    <pre><code data-trim contenteditable data-srcbyline='beer.js?1-4;19-20;31-33'></code></pre>
                 </section>
 
                 <section>
                     <h2>Pseudo Tests</h2>
                     <p>Just like real tests, except that they actually pass.</p>
 
-                    <pre class='fragment'><code data-trim contenteditable>
+                    <pre class='fragment'><code data-trim contenteditable data-srcbyline='fasdf'>
 [pseudo test code]
                     </code></pre>
                 </section>
@@ -359,7 +349,6 @@
         <script src='node_modules/reveal.js/js/reveal.min.js'></script>
 
         <script>
-
         // Full list of configuration options available here:
         // https://github.com/hakimel/reveal.js#configuration
         Reveal.initialize({
@@ -376,10 +365,10 @@
                 { src: 'node_modules/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                 { src: 'node_modules/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                 { src: 'node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                { src: 'node_modules/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                { src: 'node_modules/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+                { src: 'node_modules/source-by-line/srcByLine.js', async: true }
             ]
         });
-
         </script>
 
     </body>

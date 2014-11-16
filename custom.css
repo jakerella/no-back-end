@@ -38,3 +38,16 @@ aside.title-text h3 {
     position: absolute;
     bottom: -4em;
 }
+
+
+.outline, .outline h3 {
+    color: #fff;
+    -webkit-text-stroke: 1px #000;
+    text-shadow:
+        3px 3px 4px #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
