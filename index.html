@@ -76,7 +76,7 @@
 
                 <!-- The Situation -->
 
-                <section data-background='#eff'>
+                <section>
                     <h1>The Situation:</h1>
                 </section>
 
@@ -192,14 +192,14 @@
                         <li class='fragment'>Execute callbacks with mock data</li>
                     </ol>
 
-                    <cite>http://www.imdb.com/media/rm550033152/tt1951265?ref_=ttmd_md_pv</cite>
+                    <cite style='bottom:-11em;'>http://www.imdb.com/media/rm550033152/tt1951265?ref_=ttmd_md_pv</cite>
                 </section>
 
 
                 <!-- The Execution -->
 
                 <section>
-                    <h1 style='font-size:2.8em;'>The Exectuion:</h1>
+                    <h1 style='font-size:2.8em;'>The Execution:</h1>
                 </section>
 
                 <section>
@@ -242,7 +242,11 @@
                 </section>
 
                 <section>
-                    <pre><code data-trim contenteditable data-srcbyline='beer.js?1-4;19-20;31-33'></code></pre>
+                    <pre><code contenteditable data-srcbyline='beer.js?1-3;19-21;37-39;56-57;71-73'></code></pre>
+                </section>
+
+                <section>
+                    <pre><code contenteditable data-srcbyline='beer.js?3-19'></code></pre>
                 </section>
 
                 <section>
@@ -366,7 +370,7 @@
                 { src: 'node_modules/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                 { src: 'node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                 { src: 'node_modules/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-                { src: 'node_modules/source-by-line/srcByLine.js', async: true }
+                { src: 'node_modules/source-by-line/srcByLine.js', async: true, callback: function() { window.srcbyline.init(); } }
             ]
         });
         </script>
