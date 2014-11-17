@@ -99,3 +99,33 @@ describe('Toggling favorites', function() {
 
 });
 
+
+// Sinon
+
+var server;
+setup(function() {
+
+    server = sinon.fakeServer.create();
+    
+    server.autoRespond = true;
+
+
+    this.server.respondWith(
+        'GET',
+        '/api/search',
+        [
+            200,
+            { 'Content-Type': 'application/json' },
+            JSON.stringify({ "results": [] })
+        ]
+    );
+
+
+});
+
+
+breakdown(function() {
+    server.restore();
+});
+
+
