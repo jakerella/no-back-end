@@ -26,7 +26,7 @@ beforeEach(function() {
                     // ...
                 });
             }
-
+            // ...
             if (request.data.query && request.data.query === 'HTTP-ERROR') {
                 return { status: 500, response: 'Uh oh...' };
             }
@@ -51,7 +51,7 @@ afterEach(function() {
 test('Searching - no results', function() {
 
     setupMockAjax({
-        url: /api\/search/,
+        url: '/api/search',
         method: 'GET',
         data: { query: 'fhqwhgads' },
         respondWith: { results: [] }
@@ -85,3 +85,5 @@ test('Searching - HTTP error', function() {
 
 });
 
+
+// ...

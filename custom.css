@@ -36,6 +36,9 @@ aside.title-text h3 {
     position: absolute;
     bottom: -4em;
 }
+.slides cite:before {
+    content: "Image credit: ";
+}
 
 .outline, .outline h3 {
     color: #fff;
