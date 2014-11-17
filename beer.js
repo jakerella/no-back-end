@@ -47,6 +47,7 @@ window.beerApp = (function(beer) {
                 beer.showBeerRating(beerId, data.rating);
                 callback(data.rating);
             },
+            // ...
             error: function searchErrorHandler() {
                 beer.notify("Sorry, but beer rating failed!");
                 callback(null);
