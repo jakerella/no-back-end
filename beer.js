@@ -28,6 +28,7 @@ window.beerApp = (function(beer) {
                 beer.toggleBeerFavIcon(beerId, data.isFavorite);
                 callback(data.isFavorite);
             },
+            // ...
             error: function searchErrorHandler() {
                 beer.notify("Sorry, but toggling favorites failed!");
                 callback(null);
@@ -44,7 +45,7 @@ window.beerApp = (function(beer) {
             type: "POST",
             dataType: "json",
             success: function searchSuccessHandler(data) {
-                beer.showBeerRating(beerId, data.rating);
+                beer.showBeerRating(beerId, data.rating, data.avgRating);
                 callback(data.rating);
             },
             // ...

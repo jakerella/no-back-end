@@ -20,7 +20,6 @@ aside.title-text h3 {
     font-size: 1.2em;
 }
 
-
 .reveal .slides .top-left {
     text-align: left;
 }
@@ -28,7 +27,6 @@ aside.title-text h3 {
     margin-left: 0;
     margin-right: 0;
 }
-
 
 .slides cite {
     display: block;
@@ -38,7 +36,6 @@ aside.title-text h3 {
     position: absolute;
     bottom: -4em;
 }
-
 
 .outline, .outline h3 {
     color: #fff;
@@ -51,3 +48,7 @@ aside.title-text h3 {
         1px 1px 0 #000;
 }
 
+.slides .fine {
+    color: #999;
+    font-size: 0.9em;
+}
