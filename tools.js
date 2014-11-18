@@ -109,16 +109,31 @@ setup(function() {
     
     server.autoRespond = true;
 
-
-    this.server.respondWith(
+    // ...
+    server.respondWith(
         'GET',
-        '/api/search',
+        'api/search',
         [
             200,
             { 'Content-Type': 'application/json' },
             JSON.stringify({ "results": [] })
         ]
     );
+
+
+    server.respondWith('GET', /api\/rate\/(\d+)/, function(request, beerId) {
+        var postData = customPostBodyParser(request.requestBody);
+
+        request.respond(
+            200,
+            { 'Content-Type': 'application/json' },
+            JSON.stringify({
+                id: beerId,
+                rating: postData.rating,
+                avgRating: 3.75
+            })
+        );
+    });
 
 
 });
