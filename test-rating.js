@@ -1,11 +1,11 @@
-
+// WARNING: THIS IS PSEUDO CODE!
 beforeEach(function() {
 
 
     setupMockAjax({
 
-        url: /api\/rate\/([0-9]+)/,
-        method: 'GET',
+        url: /api\/rate\/(\d+)/,
+        method: 'POST',
         respond: function(request) {
             
             return {

@@ -1,11 +1,11 @@
-
+// WARNING: THIS IS PSEUDO CODE!
 beforeEach(function() {
 
 
     setupMockAjax({
 
         url: 'api/favorite/13',
-        method: 'GET',
+        method: 'POST',
         respondWith: { id: 13, isFavorite: false }
 
     });
@@ -14,7 +14,7 @@ beforeEach(function() {
     setupMockAjax({
 
         url: 'api/favorite/7',
-        method: 'GET',
+        method: 'POST',
         respondWith: { id: 7, isFavorite: true }
 
     });

@@ -1,5 +1,5 @@
+// WARNING: THIS IS PSEUDO CODE!
 
-// Mockjax
 
 $.mockjax({
     url: 'api/search',
@@ -43,7 +43,7 @@ var testApp = angular.module('testApp', ['beerApp', 'ngMockE2E']);
 
 testApp.run(function($httpBackend) {
 
-    $httpBackend.whenGET('/api/search').respond([]);
+    $httpBackend.whenGET('/api/search').respond({ results: [] });
 
 
     $httpBackend.whenGET('/api/search').respond(function(method, url) {
