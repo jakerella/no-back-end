@@ -55,3 +55,7 @@ aside.title-text h3 {
     color: #999;
     font-size: 0.9em;
 }
+
+.reveal pre code {
+    max-height: 600px;
+}

@@ -26,7 +26,7 @@ window.beerApp = (function(beer) {
             dataType: "json",
             success: function favoriteSuccessHandler(data) {
                 beer.toggleBeerFavIcon(beerId, data.isFavorite);
-                callback(data.isFavorite);
+                callback(data.id, data.isFavorite);
             },
             // ...
             error: function favoriteErrorHandler() {
@@ -45,8 +45,8 @@ window.beerApp = (function(beer) {
             type: "POST",
             dataType: "json",
             success: function rateSuccessHandler(data) {
-                beer.showBeerRating(beerId, data.rating, data.avgRating);
-                callback(data.rating);
+                beer.showBeerRating(data.id, data.rating, data.avgRating);
+                callback(data);
             },
             // ...
             error: function rateErrorHandler() {

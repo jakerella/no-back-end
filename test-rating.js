@@ -1,4 +1,9 @@
+
+// -------------------------- //
 // WARNING: THIS IS PSEUDO CODE!
+// -------------------------- //
+
+
 beforeEach(function() {
 
 
@@ -35,16 +40,20 @@ test('Rating - bad rating value', function() {
     assertCalled(beerApp.notify, 1);
     assertCalled($.ajax, 0);
 
+    asyncDone();
 });
 
 test('Rating - good rating', function() {
 
-    beerApp.rateBrew(13, 5, function(id, rating, average) {
-        assertEqual(id, 13);
-        assertEqual(rating, 5);
-        assertEqual(average, 3.75);
-        assertCalled(beerApp.showBeerRating, 1);
+    beerApp.rateBrew(13, 4, function(data) {
+        assertEqual(data.id, 13);
+        assertEqual(data.rating, 4);
+        assertEqual(data.avgRating, 3.5);
+        assertCalled(beerApp.showBeerRating);
+
         // ...
+        
+        asyncDone();
     });
 
 });

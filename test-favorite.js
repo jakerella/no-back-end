@@ -1,4 +1,9 @@
+
+// -------------------------- //
 // WARNING: THIS IS PSEUDO CODE!
+// -------------------------- //
+
+
 beforeEach(function() {
 
 
@@ -44,7 +49,10 @@ test('Favorite - unknown ID', function() {
         assertEqual(id, 12345);
         assertEqual(isFavorite, null);
         assertCalled(beerApp.notify, 1);
+
         // ...
+        
+        asyncDone();
     });
 
 });
@@ -54,12 +62,14 @@ test('Favorite - good ID, already favorite', function() {
     beerApp.toggleFavorite(13, function(id, isFavorite) {
         assertEqual(id, 13);
         assertEqual(isFavorite, false);
-        assertTrue($('[data-beerid=13]').hasClass('favorite'));
         // Don't do this...
         // assertTrue($('[data-beerid=13]').hasClass('favorite'));
         // Do this...
-        assertCalled(beerApp.toggleBeerFavIcon, 1);
+        assertCalled(beerApp.toggleBeerFavIcon);
+
         // ...
+        
+        asyncDone();
     });
 
 });
